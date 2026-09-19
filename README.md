@@ -70,24 +70,6 @@ Knowledge graph -> Graph | Timeline | Evidence report
 
 ---
 
-## Setup & Execution
-
-```bash
-# Clone repo
-git clone <repo-url>
-cd digital-identity-intelligence
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Configure environment
-cp .env.example .env   # add API keys
-
-# Run Streamlit app
-streamlit run app.py
-```
-
----
 
 ## Team
 - Niveditha Katta
