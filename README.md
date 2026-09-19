@@ -1,6 +1,7 @@
 # Digital Identity Intelligence System
 
 **NEURAX Hackathon 3.0 | Domain 3: AI in Cybersecurity**
+
 **Problem Statement:** Public Profile & Digital Footprint Intelligence
 
 ---
