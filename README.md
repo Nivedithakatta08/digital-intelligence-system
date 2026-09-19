@@ -53,7 +53,7 @@ Knowledge graph -> Graph | Timeline | Evidence report
 ---
 
 ## Privacy & Responsible Design
-- Only consented, public or synthetic data is used
+- Only consented and public data is used
 - No private accounts, leaked data or credential-based access
 - Every output is traceable to a public source
 - No sensitive attribute inference
