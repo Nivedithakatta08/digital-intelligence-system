@@ -9,7 +9,7 @@
 ## Problem Understanding
 A person's public digital presence is fragmented across platforms (Instagram, X/Twitter, YouTube, LinkedIn, GitHub, websites, event pages). Different usernames, aliases and incomplete profiles make manual correlation slow and error-prone.
 
-Our system is **not** a reverse-image search or a generic scraper. It is an **AI-driven identity intelligence system** that:
+Our system is an **AI-driven identity intelligence system** that:
 - Identifies the most likely public identity from a consented image and context
 - Discovers social and professional profiles, affiliations, events, projects, publications and patents
 - Resolves aliases and usernames
