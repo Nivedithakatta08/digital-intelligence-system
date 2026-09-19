@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 Problem Understanding
+## Problem Understanding
 A person's public digital presence is fragmented across platforms (Instagram, X/Twitter, YouTube, LinkedIn, GitHub, websites, event pages). Different usernames, aliases and incomplete profiles make manual correlation slow and error-prone.
 
 Our system is **not** a reverse-image search or a generic scraper. It is an **AI-driven identity intelligence system** that:
@@ -18,7 +18,7 @@ Our system is **not** a reverse-image search or a generic scraper. It is an **AI
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 ```
 Consented image + context
@@ -40,7 +40,7 @@ Knowledge graph -> Graph | Timeline | Evidence report
 
 ---
 
-## 🎯 Approach
+## Approach
 
 - **Hypothesis Generation:** Each candidate identity is treated as a hypothesis, ranked by supporting and contradicting evidence.
 - **Discovery:** Search approved public sources for matching profiles.
@@ -51,7 +51,7 @@ Knowledge graph -> Graph | Timeline | Evidence report
 
 ---
 
-## 🔒 Privacy & Responsible Design
+## Privacy & Responsible Design
 - Only consented, public or synthetic data is used
 - No private accounts, leaked data or credential-based access
 - Every output is traceable to a public source
@@ -59,7 +59,7 @@ Knowledge graph -> Graph | Timeline | Evidence report
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 - **Python**
 - **Pretrained face/image embeddings**
 - **LLM-based extraction**
@@ -69,7 +69,7 @@ Knowledge graph -> Graph | Timeline | Evidence report
 
 ---
 
-## 🚀 Setup & Execution
+## Setup & Execution
 
 ```bash
 # Clone repo
@@ -88,7 +88,7 @@ streamlit run app.py
 
 ---
 
-## 👥 Team
+## Team
 - Niveditha Katta
 - Meghana Kammari
 - Kokonda Sravya
