@@ -138,18 +138,6 @@ Gemini-generated results are treated as analysis of source information. The orig
 
 The architecture supports additional organizer-approved public sources through modular connectors. The system does not depend on a paid general-purpose search API.
 
-### Synthetic Dataset
-
-`data/mock_profiles.json` contains a small synthetic dataset used for:
-
-* Testing
-* Validation
-* False-match handling
-* Duplicate-name scenarios
-* Confidence calibration
-
-Synthetic records are never presented as real evidence.
-
 ---
 
 ## Privacy & Responsible Design
