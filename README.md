@@ -1,16 +1,11 @@
-<div align="center">
-
 # Digital Identity Intelligence System
 
-**An AI-assisted platform for discovering, resolving, and analyzing public-source identity information across multiple online platforms.**
+An AI-assisted platform for discovering, resolving, and analyzing public-source identity information across multiple online platforms.
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
 ![NetworkX](https://img.shields.io/badge/NetworkX-Graphs-4C8CBF)
-![Status](https://img.shields.io/badge/Status-Academic%20%2F%20Hackathon-blue)
 ![Data](https://img.shields.io/badge/Data-Public%20Sources%20Only-success)
-
-</div>
 
 ---
 
@@ -25,79 +20,43 @@
 - [Usage](#usage)
 - [Core Modules](#core-modules)
 - [Output](#output)
-- [Screenshots](#screenshots)
 - [Limitations](#limitations)
-- [Roadmap](#roadmap)
 - [Responsible Use](#responsible-use)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
 
 ## Overview
 
-The system takes an identity input such as a **username**, **organization**, or **profile information** and builds a structured view of the discovered identity. It combines:
+The system takes an identity input such as a **username**, **organization**, or **profile information** and builds a structured view of the discovered identity. It combines identity resolution, evidence correlation, conflict detection, confidence scoring, timeline analysis, and knowledge-graph visualization in a single interactive dashboard.
 
-- Identity resolution
-- Evidence correlation
-- Conflict detection
-- Confidence scoring
-- Timeline analysis
-- Knowledge-graph visualization
-
-Instead of examining individual profiles manually, everything is brought together in a single interactive dashboard.
+Instead of examining individual profiles manually, the whole analysis runs through one pipeline.
 
 ---
 
 ## Key Features
 
-### Identity Discovery
-
-Discovers publicly available identity information from supported online sources using identifiers such as:
-
-- Username
-- Organization
-- Profile information
-- Public-source records
-
-### Identity Resolution
-
-Analyzes discovered profiles and determines which records are likely associated with the same person, using signals such as:
-
-| Signal | Description |
+| Feature | Description |
 | --- | --- |
-| Username similarity | How closely handles match across platforms |
-| Name similarity | Agreement between display or legal names |
-| Organization | Shared affiliations |
-| Location | Consistency of stated locations |
-| Roles | Matching titles or responsibilities |
-| Projects | Overlapping repositories or work |
-| Source agreement | Number of independent sources that corroborate a link |
+| **Identity Discovery** | Finds public identity records from supported sources using a username, organization, or profile information |
+| **Identity Resolution** | Decides which discovered profiles likely belong to the same person |
+| **Evidence Correlation** | Collects profile records, source URLs, organizations, projects, publications, and public identifiers |
+| **Conflict Detection** | Flags inconsistent names, organizations, locations, roles, or profile details |
+| **Confidence Scoring** | Combines multiple signals into an overall confidence score |
+| **Knowledge Graph** | Builds a relationship graph of the identity and its linked entities |
+| **Identity Timeline** | Shows dated activity and events in chronological order |
 
-### Evidence Correlation
+### Resolution signals
 
-Collects and organizes supporting information for a resolved identity:
-
-- Profile records
-- Source URLs
-- Organizations
+- Username similarity
+- Name similarity
+- Organization
+- Location
+- Roles
 - Projects
-- Publications
-- Public identifiers
+- Source agreement
 
-### Conflict Detection
-
-Flags potentially inconsistent information across discovered records:
-
-- Different names
-- Different organizations
-- Conflicting locations
-- Conflicting roles
-- Inconsistent profile information
-
-### Confidence Scoring
-
-Combines multiple evidence signals into an overall confidence score. Components include:
+### Confidence score components
 
 - Username Match
 - Image Match
@@ -107,9 +66,7 @@ Combines multiple evidence signals into an overall confidence score. Components 
 - Evidence Strength
 - Conflict Detection
 
-### Knowledge Graph
-
-Builds a relationship graph that connects identity entities. The graph is generated dynamically from the discovered data.
+### Knowledge graph structure
 
 ```text
 Person
@@ -124,9 +81,7 @@ Person
    +-- Locations
 ```
 
-### Identity Timeline
-
-Displays dated identity activity and events to give a chronological view of the discovered information.
+The graph is generated dynamically from the discovered identity data.
 
 ---
 
@@ -145,50 +100,6 @@ flowchart TD
     G --> H
 ```
 
-<details>
-<summary>Plain-text version of the diagram</summary>
-
-```text
-                 +---------------------+
-                 |     User Input      |
-                 | Username / Org /    |
-                 | Profile Information |
-                 +----------+----------+
-                            |
-                            v
-                 +---------------------+
-                 | Identity Discovery  |
-                 +----------+----------+
-                            |
-                            v
-                 +---------------------+
-                 | Identity Resolution |
-                 +----------+----------+
-                            |
-                            v
-                 +---------------------+
-                 | Evidence Correlation|
-                 +----------+----------+
-                            |
-              +-------------+-------------+
-              |             |             |
-              v             v             v
-       +------------+ +------------+ +------------+
-       |  Conflict  | |  Scoring   | |  Timeline  |
-       | Detection  | |   Engine   | |  Analysis  |
-       +------+-----+ +------+-----+ +------+-----+
-              |              |              |
-              +--------------+--------------+
-                             |
-                             v
-                 +---------------------+
-                 | Knowledge Graph and |
-                 |     Dashboard       |
-                 +---------------------+
-```
-
-</details>
-
 ---
 
 ## Project Structure
@@ -196,7 +107,7 @@ flowchart TD
 ```text
 digital-intelligence-system/
 |
-+-- app.py                 # Streamlit dashboard and pipeline orchestration
++-- app.py                 # Streamlit dashboard and pipeline
 +-- requirements.txt
 +-- README.md
 +-- .gitignore
@@ -209,7 +120,7 @@ digital-intelligence-system/
 |   +-- conflict.py        # Inconsistency detection
 |   +-- scorer.py          # Confidence scoring
 |   +-- timeline.py        # Chronological event building
-|   +-- graph_builder.py   # Knowledge graph construction and rendering
+|   +-- graph_builder.py   # Graph construction and rendering
 |   +-- ...
 |
 +-- generated/
@@ -227,17 +138,13 @@ digital-intelligence-system/
 | NetworkX | Knowledge graph construction |
 | Matplotlib | Graph visualization |
 | Pandas | Data processing |
-| Git | Version control |
-| GitHub | Source code repository |
+| Git / GitHub | Version control and hosting |
 
 ---
 
 ## Installation
 
-### Prerequisites
-
-- Python 3.9 or newer
-- Git
+**Prerequisites:** Python 3.9 or newer, and Git.
 
 ### 1. Clone the repository
 
@@ -248,14 +155,14 @@ cd digital-intelligence-system
 
 ### 2. Create and activate a virtual environment
 
-**Windows**
+Windows:
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-**macOS / Linux**
+macOS / Linux:
 
 ```bash
 python3 -m venv venv
@@ -286,18 +193,15 @@ The app opens in your browser, usually at `http://localhost:8501`.
 
 ## Usage
 
-1. **Provide identity input.** Enter a username or other supported identity information.
+1. Enter a username or other supported identity information, for example:
 
-   ```text
+```text
    Username: tanaypratap
-   ```
+```
 
-2. **Analyze.** Click the `Analyze Identity` button.
-3. **Discovery.** The system collects available public-source profile information.
-4. **Resolution.** Candidate profiles are compared and related records are linked.
-5. **Evidence analysis.** Supporting evidence is collected and organized.
-6. **Risk and confidence analysis.** Confidence is calculated from available signals, and conflicting information is flagged.
-7. **Visualization.** The dashboard presents:
+2. Click **Analyze Identity**.
+3. The system runs the pipeline: discovery, resolution, evidence analysis, then confidence and conflict analysis.
+4. The dashboard displays:
    - Identified Person
    - Source Coverage
    - Confidence Score
@@ -319,15 +223,13 @@ The app opens in your browser, usually at `http://localhost:8501`.
 | `evidence.py` | Organizes supporting evidence for discovered identities |
 | `conflict.py` | Detects inconsistencies between identity records |
 | `scorer.py` | Calculates confidence from multiple identity signals |
-| `timeline.py` | Builds a chronological representation of identity events |
-| `graph_builder.py` | Constructs and renders the knowledge graph with NetworkX and Matplotlib |
-| `app.py` | Streamlit dashboard that coordinates the full analysis pipeline |
+| `timeline.py` | Builds a chronological view of identity events |
+| `graph_builder.py` | Builds and renders the knowledge graph with NetworkX and Matplotlib |
+| `app.py` | Streamlit dashboard that coordinates the full pipeline |
 
 ---
 
 ## Output
-
-The system produces a structured identity analysis:
 
 ```text
 Identity
@@ -342,37 +244,21 @@ Identity
 +-- Knowledge Graph
 ```
 
-The knowledge graph shows relationships between the resolved identity and discovered entities such as platforms, usernames, organizations, projects, publications, and locations. Generated graph images are saved to the `generated/` folder.
+The knowledge graph links the resolved identity to platforms, usernames, organizations, projects, publications, and locations. Generated graph images are saved in the `generated/` folder.
 
----
-
-## Screenshots
-
-> Add screenshots here to make the project easier to evaluate.
-
-| Dashboard | Knowledge Graph |
-| --- | --- |
-| ![Dashboard](docs/dashboard.png) | ![Knowledge Graph](docs/graph.png) |
+<!-- Add screenshots here once available:
+![Dashboard](docs/dashboard.png)
+![Knowledge Graph](docs/graph.png)
+-->
 
 ---
 
 ## Limitations
 
-- Results depend on the public sources supported by the discovery module. Coverage is not exhaustive.
+- Coverage depends on the public sources the discovery module supports.
 - Confidence scores are heuristic. They indicate likelihood, not proof of identity.
-- Common names and usernames can produce false matches, so results should be reviewed by a human.
-- Public profile data may be outdated, incomplete, or intentionally inaccurate.
-
----
-
-## Roadmap
-
-- [ ] Add support for more public data sources
-- [ ] Export reports as PDF or JSON
-- [ ] Add configurable weights for scoring components
-- [ ] Add unit tests for resolver, scorer, and conflict modules
-- [ ] Improve image-based matching
-- [ ] Add caching and rate-limit handling for source requests
+- Common names and usernames can cause false matches, so results should be reviewed by a person.
+- Public profile data may be outdated or incomplete.
 
 ---
 
@@ -380,29 +266,17 @@ The knowledge graph shows relationships between the resolved identity and discov
 
 This project is intended for **educational, research, and authorized public-source intelligence** use.
 
-The system should only process information that is legally accessible and appropriate to use. It must **not** be used to:
+It should only process information that is legally accessible and appropriate to use. It must **not** be used to:
 
 - Obtain private information
 - Bypass access controls
 - Impersonate individuals
 - Facilitate harassment or unauthorized surveillance
 
-Users are responsible for complying with the terms of service of each data source and with applicable privacy laws.
-
----
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add your feature"`
-4. Push the branch: `git push origin feature/your-feature`
-5. Open a pull request
+Users are responsible for following each data source's terms of service and applicable privacy laws.
 
 ---
 
 ## License
 
-This project is intended as an academic and hackathon project. Add an appropriate open-source license (for example MIT or Apache-2.0) as a `LICENSE` file before distributing it publicly.
+This is an academic and hackathon project. Add a `LICENSE` file (for example MIT or Apache-2.0) before distributing it publicly.
