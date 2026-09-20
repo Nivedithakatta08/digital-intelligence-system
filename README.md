@@ -28,74 +28,69 @@ Our system is an **AI-driven identity intelligence system** that:
 
 ## Architecture
 
-```text
-Consented image + limited context
-        |
-        v
-Candidate hypotheses
-        |
-        v
-Public source discovery
-   /         |          \
-  v          v           v
-GitHub    Gemini API   Approved
- API                   public sources
-   \         |          /
-    \        |         /
-     v       v        v
-       Entity resolution
-              |
-              v
-    Information extraction
-              |
-              v
-    Evidence + confidence
-              |
-        +-----+-----+
-        |           |
-        v           v
-   Conflict      Timeline
-   detection        |
-        |           |
-        +-----+-----+
-              |
-              v
-      Knowledge graph
-              |
-              v
-    Graph + Report + UI
-```
-
----
+                 USER
+                  |
+        Username / Identity Image
+                  |
+                  v
+          STREAMLIT FRONTEND
+             (app.py)
+                  |
+                  v
+          DISCOVERY MODULE
+        Public profile collection
+                  |
+                  v
+          IDENTITY RESOLUTION
+       Names, aliases, usernames
+                  |
+                  v
+          EVIDENCE EXTRACTION
+                  |
+                  v
+         CONFLICT DETECTION
+                  |
+                  v
+         CONFIDENCE SCORING
+                  |
+          +-------+-------+
+          |               |
+          v               v
+    KNOWLEDGE GRAPH    TIMELINE
+          |               |
+          +-------+-------+
+                  |
+                  v
+         RESULTS DASHBOARD
+   Profile | Graph | Confidence
+       Conflicts | Timeline
 
 ## Project Structure
 
 ```text
-digital_identity_intelligence/
-│
+
+NeuroShield/
 ├── app.py
-├── config.py
 ├── requirements.txt
-│
-├── connectors/
-│   ├── github_connector.py
-│   └── mock_connector.py
-│
+├── README.md
+├── .gitignore
 ├── modules/
+│   ├── __init__.py
 │   ├── discovery.py
 │   ├── resolver.py
-│   ├── extractor.py
 │   ├── scorer.py
 │   ├── conflict.py
+│   ├── evidence.py
 │   ├── graph_builder.py
-│   └── timeline.py
-│
-├── data/
-│   └── mock_profiles.json
-│
-└── outputs/
-    ├── report.json
-    └── graph.html
+│   ├── timeline.py
+│   ├── report.py
+│   └── intelligence.py
+├── assets/
+├── outputs/
+└── tests/
+    ├── test_resolver.py
+    ├── test_scorer.py
+    └── test_graph.py
 ```
 
 ---
