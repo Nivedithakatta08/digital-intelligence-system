@@ -280,3 +280,10 @@ Users are responsible for following each data source's terms of service and appl
 ## License
 
 This is an academic and hackathon project. (MIT License)
+
+
+## Team
+
+* Niveditha Katta
+* Meghana Kammari
+* Kokonda Sravya
