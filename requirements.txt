@@ -1,0 +1,8 @@
+streamlit
+requests
+rapidfuzz
+networkx
+pyvis
+google-generativeai
+python-dotenv
+pillow

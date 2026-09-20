@@ -1,0 +1,198 @@
+[
+  {
+    "candidate_id": "person_001",
+    "source": "mock",
+    "name": "John Doe",
+    "aliases": [
+      "Johnny Doe",
+      "J. Doe"
+    ],
+    "username": "john_doe",
+    "usernames": [
+      "john_doe",
+      "johndoe"
+    ],
+    "organization": "Microsoft",
+    "roles": [
+      "AI Engineer",
+      "Research Contributor"
+    ],
+    "projects": [
+      {
+        "name": "Document Intelligence",
+        "date": "2024-06-15",
+        "description": "Identity document analysis project."
+      },
+      {
+        "name": "Identity Verification",
+        "date": "2025-02-10",
+        "description": "Automated identity verification research."
+      }
+    ],
+    "events": [
+      {
+        "name": "AI Summit 2025",
+        "date": "2025-09-20",
+        "description": "Presented research related to artificial intelligence."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-01-10",
+        "event": "Profile",
+        "title": "Public profile created",
+        "details": "Public identity profile was first recorded."
+      },
+      {
+        "date": "2024-06-15",
+        "event": "Project",
+        "title": "Document Intelligence",
+        "details": "Worked on identity document analysis."
+      },
+      {
+        "date": "2025-02-10",
+        "event": "Project",
+        "title": "Identity Verification",
+        "details": "Worked on automated identity verification."
+      },
+      {
+        "date": "2025-09-20",
+        "event": "Event",
+        "title": "AI Summit 2025",
+        "details": "Participated in an AI-focused event."
+      }
+    ],
+    "bio": "AI Engineer working on artificial intelligence systems and identity technologies.",
+    "location": "Seattle",
+    "profile_url": "https://example.com/john-doe"
+  },
+  {
+    "candidate_id": "person_002",
+    "source": "mock",
+    "name": "Jane Smith",
+    "aliases": [
+      "J. Smith"
+    ],
+    "username": "jane_smith",
+    "usernames": [
+      "jane_smith"
+    ],
+    "organization": "Google",
+    "roles": [
+      "Machine Learning Researcher"
+    ],
+    "projects": [
+      {
+        "name": "Computer Vision",
+        "date": "2024-03-12",
+        "description": "Research project involving computer vision."
+      },
+      {
+        "name": "Image Understanding",
+        "date": "2025-01-25",
+        "description": "Research into image understanding systems."
+      }
+    ],
+    "events": [
+      {
+        "name": "ML Conference 2025",
+        "date": "2025-08-18",
+        "description": "Participated in a machine learning conference."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-09-05",
+        "event": "Profile",
+        "title": "Public profile created",
+        "details": "Public identity profile was first recorded."
+      },
+      {
+        "date": "2024-03-12",
+        "event": "Project",
+        "title": "Computer Vision",
+        "details": "Started work related to computer vision."
+      },
+      {
+        "date": "2025-01-25",
+        "event": "Project",
+        "title": "Image Understanding",
+        "details": "Worked on image understanding research."
+      },
+      {
+        "date": "2025-08-18",
+        "event": "Event",
+        "title": "ML Conference 2025",
+        "details": "Participated in a machine learning conference."
+      }
+    ],
+    "bio": "Machine Learning Researcher working on computer vision and intelligent image systems.",
+    "location": "California",
+    "profile_url": "https://example.com/jane-smith"
+  },
+  {
+    "candidate_id": "person_003",
+    "source": "mock",
+    "name": "Alex Kumar",
+    "aliases": [
+      "A. Kumar"
+    ],
+    "username": "alex_kumar",
+    "usernames": [
+      "alex_kumar",
+      "alexkumar"
+    ],
+    "organization": "OpenAI",
+    "roles": [
+      "AI Researcher"
+    ],
+    "projects": [
+      {
+        "name": "Language Models",
+        "date": "2023-11-20",
+        "description": "Research involving language model systems."
+      },
+      {
+        "name": "Intelligent Systems",
+        "date": "2025-04-08",
+        "description": "Research into intelligent software systems."
+      }
+    ],
+    "events": [
+      {
+        "name": "AI Research Forum 2025",
+        "date": "2025-10-12",
+        "description": "Participated in an AI research forum."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-06-14",
+        "event": "Profile",
+        "title": "Public profile created",
+        "details": "Public identity profile was first recorded."
+      },
+      {
+        "date": "2023-11-20",
+        "event": "Project",
+        "title": "Language Models",
+        "details": "Started research involving language models."
+      },
+      {
+        "date": "2025-04-08",
+        "event": "Project",
+        "title": "Intelligent Systems",
+        "details": "Worked on intelligent software systems."
+      },
+      {
+        "date": "2025-10-12",
+        "event": "Event",
+        "title": "AI Research Forum 2025",
+        "details": "Participated in an AI research forum."
+      }
+    ],
+    "bio": "AI researcher interested in language models and intelligent systems.",
+    "location": "San Francisco",
+    "profile_url": "https://example.com/alex-kumar"
+  }
+]
