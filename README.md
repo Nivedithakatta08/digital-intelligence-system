@@ -279,4 +279,4 @@ Users are responsible for following each data source's terms of service and appl
 
 ## License
 
-This is an academic and hackathon project. Add a `LICENSE` file (for example MIT or Apache-2.0) before distributing it publicly.
+This is an academic and hackathon project. (MIT License)
